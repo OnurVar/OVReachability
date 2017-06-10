@@ -1,0 +1,13 @@
+language: swift
+
+branches:
+only:
+- master
+
+xcode_workspace: OVReachability.xcworkspace
+xcode_scheme: OVReachability-Example
+osx_image: xcode8.3
+xcode_sdk: iphonesimulator10.3
+
+script:
+- xcodebuild clean build test -project OVReachability.xcodeproj -scheme OVReachability-Example
