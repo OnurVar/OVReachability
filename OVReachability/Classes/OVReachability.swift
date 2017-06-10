@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AFNetworking
+import Alamofire
 
 
 
@@ -22,12 +22,11 @@ public class OVReachability: NSObject {
     //MARK: Variables
     public static let defaultManager = OVReachability()
     var completion : OVReachabilityCompletion!
-    fileprivate var manager : AFHTTPSessionManager!
-    fileprivate var urlHost : URL!
+    fileprivate var manager : Alamofire.NetworkReachabilityManager!
+    fileprivate var urlHost : String!
     var isServerReachable = false
     
     
-    public static func getit(){}
     
     //MARK: Initializers
     
@@ -35,24 +34,23 @@ public class OVReachability: NSObject {
         
     }
     
-    public func setup(withDomain domain: String,withCompletion completion: @escaping OVReachabilityCompletion){
-        if let url = URL.init(string: domain){
-            self.setup(withDomainURL: url, withCompletion: completion)
-        }
-    }
     
-    public func setup(withDomainURL domain: URL, withCompletion completion:@escaping OVReachabilityCompletion){
+    
+    public func setup(withDomain domain: String, withCompletion completion:@escaping OVReachabilityCompletion){
         self.completion = completion
         if manager != nil {
-            manager.reachabilityManager.stopMonitoring()
+            manager.stopListening()
             manager = nil
         }
         
-        urlHost = domain
-        manager = AFHTTPSessionManager.init(baseURL: urlHost)
-        manager.reachabilityManager.setReachabilityStatusChange { (status) in
-            switch status{
-            case .reachableViaWiFi,.reachableViaWWAN:
+        urlHost =  domain
+        
+        manager = Alamofire.NetworkReachabilityManager(host: domain)
+        manager.listener = { status in
+            print("Network Status Changed: \(status)")
+            switch status {
+                
+            case .reachable(.ethernetOrWiFi),.reachable(.wwan):
                 self.didChangeConnection(withConnection: true)
                 break
             default:
@@ -60,12 +58,12 @@ public class OVReachability: NSObject {
                 break
             }
         }
-        manager.reachabilityManager.startMonitoring()
+        manager.startListening()
     }
     
     func stopMonitoring(){
         if manager != nil {
-            manager.reachabilityManager.stopMonitoring()
+            manager.stopListening()
         }
     }
     
@@ -87,6 +85,7 @@ public class OVReachability: NSObject {
                     }else if true == wasServerReachable && false == isServerReachableCurrent {
                         self.completion(false)
                     }
+                    sleep(1)
                 }while( !isServerReachableCurrent );
             }
         }else{
@@ -96,7 +95,10 @@ public class OVReachability: NSObject {
     }
     
     fileprivate func checkConnectivity() -> Bool {
-        let request = URLRequest.init(url: urlHost)
+        guard let url = URL.init(string: String.init(format: "http://%@",urlHost)) else {
+            return false
+        }
+        let request = URLRequest.init(url: url)
         var response: URLResponse?
         var urlData: Data?
         do {

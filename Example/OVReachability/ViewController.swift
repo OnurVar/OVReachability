@@ -23,11 +23,13 @@ class ViewController: UIViewController {
     }
     
     func setupReachability(){
-        OVReachability.defaultManager.setup(withDomain: "http://www.google.com") { (isConnected) in
-            if isConnected {
-                UIAlertView.init(title: "Attention", message: "Connected", delegate: nil, cancelButtonTitle: "OK").show()
-            }else{
-                UIAlertView.init(title: "Attention", message: "Disconnected", delegate: nil, cancelButtonTitle: "OK").show()
+        OVReachability.defaultManager.setup(withDomain: "www.google.com") { (isConnected) in
+            DispatchQueue.main.async {
+                if isConnected {
+                    UIAlertView.init(title: "Attention", message: "Connected", delegate: nil, cancelButtonTitle: "OK").show()
+                }else{
+                    UIAlertView.init(title: "Attention", message: "Disconnected", delegate: nil, cancelButtonTitle: "OK").show()
+                }
             }
         }
     }

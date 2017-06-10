@@ -20,7 +20,7 @@
   },
   "source_files": "OVReachability/Classes/**/*",
   "dependencies": {
-    "AFNetworking": [
+    "Alamofire": [
 
     ]
   }

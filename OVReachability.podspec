@@ -11,5 +11,5 @@ The original reachability class just checks the first hop on the way to the Host
   s.source           = { :git => 'https://github.com/OnurVar/OVReachability.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'OVReachability/Classes/**/*'
-  s.dependency 'AFNetworking'
+  s.dependency 'Alamofire'
 end
