@@ -1,9 +1,6 @@
 # OVReachability
 
-[![CI Status](http://img.shields.io/travis/Onur Var/OVReachability.svg?style=flat)](https://travis-ci.org/Onur Var/OVReachability)
-[![Version](https://img.shields.io/cocoapods/v/OVReachability.svg?style=flat)](http://cocoapods.org/pods/OVReachability)
-[![License](https://img.shields.io/cocoapods/l/OVReachability.svg?style=flat)](http://cocoapods.org/pods/OVReachability)
-[![Platform](https://img.shields.io/cocoapods/p/OVReachability.svg?style=flat)](http://cocoapods.org/pods/OVReachability)
+[![Build Status](https://travis-ci.org/OnurVar/OVReachability.svg?branch=master)](https://travis-ci.org/OnurVar/OVReachability)
 
 ## Example
 
