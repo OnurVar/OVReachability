@@ -4,10 +4,5 @@ branches:
 only:
 - master
 
-xcode_workspace: OVReachability.xcworkspace
-xcode_scheme: OVReachability-Example
-osx_image: xcode8.3
-xcode_sdk: iphonesimulator10.3
-
 script:
-- xcodebuild clean build test -project OVReachability.xcodeproj -scheme OVReachability-Example
+- xcodebuild build -workspace Example/OVReachability.xcworkspace -scheme OVReachability-Example -configuration Debug ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty;

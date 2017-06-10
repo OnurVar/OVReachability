@@ -14,7 +14,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6277B0991EEC9A71003A58C9 /* travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6277B0981EEC9A71003A58C9 /* travis.yml */; };
 		E121E69906586F87171344B2 /* Pods_OVReachability_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AD9785F66590D64893537F /* Pods_OVReachability_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		607FACE51AFB9204008FA782 /* OVReachability_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OVReachability_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6277B0981EEC9A71003A58C9 /* travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = travis.yml; path = ../travis.yml; sourceTree = "<group>"; };
 		79CB29F97F15688A14FAFC5B /* Pods-OVReachability_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVReachability_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVReachability_Tests/Pods-OVReachability_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9590C62D37B61A8223E146B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D6794C293384274C47E973C8 /* Pods-OVReachability_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVReachability_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVReachability_Tests/Pods-OVReachability_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				6277B0981EEC9A71003A58C9 /* travis.yml */,
 				18F5CD0C09DE84BB931B401F /* OVReachability.podspec */,
 				EBF3364C406BDAD0C84E3A60 /* README.md */,
 				9590C62D37B61A8223E146B9 /* LICENSE */,
@@ -254,7 +251,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				6277B0991EEC9A71003A58C9 /* travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
