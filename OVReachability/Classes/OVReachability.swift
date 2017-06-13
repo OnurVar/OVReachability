@@ -20,11 +20,14 @@ public class OVReachability: NSObject {
     
     
     //MARK: Variables
-    public static let defaultManager = OVReachability()
-    var completion : OVReachabilityCompletion!
+    public static let sharedInstance = OVReachability()
+    public var isServerReachable = false
+    
+    //MARK: Variables
+    fileprivate var completion : OVReachabilityCompletion!
     fileprivate var manager : Alamofire.NetworkReachabilityManager!
     fileprivate var urlHost : String!
-    var isServerReachable = false
+    fileprivate var timeIntervalSleep = 1 //Time Interval to sleep
     
     
     
@@ -34,10 +37,9 @@ public class OVReachability: NSObject {
         
     }
     
-    
-    
-    public func setup(withDomain domain: String, withCompletion completion:@escaping OVReachabilityCompletion){
+    public func setup(withDomain domain: String, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
         self.completion = completion
+        self.timeIntervalSleep = time
         if manager != nil {
             manager.stopListening()
             manager = nil
@@ -61,7 +63,7 @@ public class OVReachability: NSObject {
         manager.startListening()
     }
     
-    func stopMonitoring(){
+    public func stopMonitoring(){
         if manager != nil {
             manager.stopListening()
         }
@@ -85,7 +87,7 @@ public class OVReachability: NSObject {
                     }else if true == wasServerReachable && false == isServerReachableCurrent {
                         self.completion(false)
                     }
-                    sleep(1)
+                    sleep(UInt32(self.timeIntervalSleep))
                 }while( !isServerReachableCurrent );
             }
         }else{
@@ -109,5 +111,4 @@ public class OVReachability: NSObject {
         return urlData != nil && response != nil
     }
     
-
 }

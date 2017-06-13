@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     func setupReachability(){
-        OVReachability.defaultManager.setup(withDomain: "www.google.com") { (isConnected) in
+        OVReachability.sharedInstance.setup(withDomain: "www.google.com",withTimeInterval: 3) { (isConnected) in
             DispatchQueue.main.async {
                 if isConnected {
                     UIAlertView.init(title: "Attention", message: "Connected", delegate: nil, cancelButtonTitle: "OK").show()
