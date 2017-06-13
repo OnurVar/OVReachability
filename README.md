@@ -1,4 +1,4 @@
-![OVReachability](Resource/logo.png?raw=true)
+![OVReachability](https://github.com/OnurVar/OVReachability/blob/master/Resources/logo.png?raw=true)
 
 [![Build Status](https://travis-ci.org/OnurVar/OVReachability.svg?branch=master)](https://travis-ci.org/OnurVar/OVReachability)
 
