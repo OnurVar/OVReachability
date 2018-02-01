@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.4.0)
-  - OVReachability (0.1.0):
+  - Alamofire (4.6.0)
+  - OVReachability (1.1.0):
     - Alamofire
 
 DEPENDENCIES:
@@ -11,9 +11,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  OVReachability: 358c50ed07fac07910c6fcabe987060137c263f3
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  OVReachability: f29c7885229c63b691e6d59d11d3d590b97f7718
 
 PODFILE CHECKSUM: 06e3e16bd195bc0de33a4826f86f1b08aafa8816
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0
