@@ -22,12 +22,16 @@ public class OVReachability: NSObject {
     //MARK: Variables
     public static let sharedInstance = OVReachability()
     public var isServerReachable = false
+    public var numberOfTry = 0
+    public var timeoutInterval = 5
     
     //MARK: Variables
     fileprivate var completion : OVReachabilityCompletion!
     fileprivate var manager : Alamofire.NetworkReachabilityManager!
-    fileprivate var urlHost : String!
+    fileprivate var domain : URL!
     fileprivate var timeIntervalSleep = 1 //Time Interval to sleep
+    fileprivate var countDisconnect = 0
+    fileprivate var isCheckingConnectivity = false
     
     
     
@@ -37,78 +41,132 @@ public class OVReachability: NSObject {
         
     }
     
-    public func setup(withDomain domain: String, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
-        self.completion = completion
-        self.timeIntervalSleep = time
-        if manager != nil {
-            manager.stopListening()
-            manager = nil
-        }
+    public func setup(withDomain domain: URL, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
         
-        urlHost =  domain
+        self.completion         = completion
+        self.timeIntervalSleep  = time
+        self.domain             = domain
+       
+        stopMonitoring()
+        manager                 = nil
         
-        manager = Alamofire.NetworkReachabilityManager(host: domain)
-        manager.listener = { status in
-            print("Network Status Changed: \(status)")
-            switch status {
-                
-            case .reachable(.ethernetOrWiFi),.reachable(.wwan):
-                self.didChangeConnection(withConnection: true)
-                break
-            default:
-                self.didChangeConnection(withConnection: false)
-                break
+        
+        if let host = domain.host {
+            self.manager = Alamofire.NetworkReachabilityManager(host: host)
+
+            manager.listener = { status in
+                switch status {
+                    
+                case .reachable(.ethernetOrWiFi):
+                    NSLog("OVReachability > Status >> Reachable Ethernet/Wifi")
+                    self.checkConnectionLoop()
+                    break
+                case .reachable(.wwan):
+                    NSLog("OVReachability > Status >> Reachable WWAN")
+                    self.checkConnectionLoop()
+                    break
+                default:
+                    NSLog("OVReachability > Status >> Not Reachable")
+                    self.notifyObserver(isConnected: false)
+                    break
+                }
             }
+            startMonitoring()
         }
-        manager.startListening()
     }
     
     public func stopMonitoring(){
-        if manager != nil {
+        if let manager = manager{
             manager.stopListening()
+        }
+    }
+    
+    public func startMonitoring(){
+        if let manager = manager{
+            manager.startListening()
         }
     }
     
     
     //MARK: Private Methods
     
-    fileprivate func didChangeConnection(withConnection isConnected: Bool){
-        if isConnected {
-            DispatchQueue.main.async {
-                var isServerReachableCurrent = false
-                repeat {
-                    isServerReachableCurrent = self.checkConnectivity()
-                    let wasServerReachable = self.isServerReachable
-                    self.isServerReachable = isServerReachableCurrent
-
-                    
-                    if false == wasServerReachable && true == isServerReachableCurrent {
-                        self.completion(true)
-                    }else if true == wasServerReachable && false == isServerReachableCurrent {
-                        self.completion(false)
-                    }
-                    sleep(UInt32(self.timeIntervalSleep))
-                }while( !isServerReachableCurrent );
+    fileprivate func checkConnectionLoop(){
+        self.checkConnectivityAsync(completion: { (isConnected) in
+            var isServerReachableCurrent = false
+            isServerReachableCurrent = isConnected
+            let wasServerReachable = self.isServerReachable
+            self.isServerReachable = isServerReachableCurrent
+            
+            if true == wasServerReachable && true == isServerReachableCurrent {
+                return
+            }else if false == wasServerReachable && true == isServerReachableCurrent {
+                self.notifyObserver(isConnected: true)
+                return
+            }else if true == wasServerReachable && false == isServerReachableCurrent {
+                if self.numberOfTry == 0 {
+                    self.notifyObserver(isConnected: false)
+                    return
+                }
+            }else if false == wasServerReachable && false == isServerReachableCurrent {
+                if self.countDisconnect == self.numberOfTry {
+                    self.notifyObserver(isConnected: false)
+                    return
+                }
+                self.countDisconnect = self.countDisconnect + 1
+                NSLog("OVReachability > Failed Times : %d",self.countDisconnect)
             }
-        }else{
-            self.isServerReachable = false
-            completion(false)
-        }
+            
+            sleep(UInt32(self.timeIntervalSleep))
+            self.checkConnectionLoop()
+        })
     }
     
-    fileprivate func checkConnectivity() -> Bool {
-        guard let url = URL.init(string: String.init(format: "http://%@",urlHost)) else {
-            return false
-        }
-        let request = URLRequest.init(url: url)
-        var response: URLResponse?
-        var urlData: Data?
-        do {
-            urlData = try NSURLConnection.sendSynchronousRequest(request, returning:&response)
-        } catch {
-            print(error.localizedDescription)
-        }
-        return urlData != nil && response != nil
+    fileprivate func notifyObserver(isConnected: Bool){
+        
+        //Refresh Variables
+        self.countDisconnect = 0
+        
+        isServerReachable = isConnected
+        completion(isConnected)
+        
+        NSLog("OVReachability > Notified %@",isConnected ? "Connected" : "Disconnected")
+        
     }
     
+    fileprivate func checkConnectivityAsync(completion: @escaping (_ connected: Bool) -> Void) {
+        
+        if !isCheckingConnectivity {
+            NSLog("OVReachability > Starting Request")
+            
+            if let domain = self.domain{
+                
+                // Setup the configuration
+                let sessionConfiguration = URLSessionConfiguration.default
+                sessionConfiguration.urlCache = nil
+                sessionConfiguration.timeoutIntervalForRequest = Double(timeoutInterval)
+                
+                // initialize the URLSession
+                let session = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue())
+                
+                // create a URLSessionDataTask with the given URL
+                isCheckingConnectivity = true
+                let task = session.dataTask(with: domain) { (data, response, error) in
+                    self.isCheckingConnectivity = false
+                    let success = (error == nil && response != nil)
+                    NSLog(String(format: "OVReachability > Request %@", success ? "Success" : "Failed" ))
+                    completion(success)
+                }
+                task.resume()
+            }
+        }
+       
+    }
+}
+
+extension OVReachability : URLSessionDelegate {
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        completionHandler(URLSession.AuthChallengeDisposition.useCredential, URLCredential.init(trust: challenge.protectionSpace.serverTrust!))
+    }
+
 }
