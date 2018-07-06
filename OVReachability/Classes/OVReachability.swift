@@ -43,6 +43,7 @@ public class OVReachability: NSObject {
     
     public func setup(withDomain domain: URL, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
         
+        NSLog("[OVReachability] Version (1.3.1)")
         self.completion         = completion
         self.timeIntervalSleep  = time
         self.domain             = domain
@@ -58,15 +59,15 @@ public class OVReachability: NSObject {
                 switch status {
                     
                 case .reachable(.ethernetOrWiFi):
-                    NSLog("OVReachability > Status >> Reachable Ethernet/Wifi")
+                    NSLog("[OVReachability] Status Changed (Reachable Ethernet/Wifi)")
                     self.checkConnectionLoop()
                     break
                 case .reachable(.wwan):
-                    NSLog("OVReachability > Status >> Reachable WWAN")
+                    NSLog("[OVReachability] Status Changed (Reachable WWAN)")
                     self.checkConnectionLoop()
                     break
                 default:
-                    NSLog("OVReachability > Status >> Not Reachable")
+                    NSLog("[OVReachability] Status Changed (Not Reachable)")
                     self.notifyObserver(isConnected: false)
                     break
                 }
@@ -108,12 +109,12 @@ public class OVReachability: NSObject {
                     return
                 }
             }else if false == wasServerReachable && false == isServerReachableCurrent {
+                self.countDisconnect = self.countDisconnect + 1
                 if self.countDisconnect == self.numberOfTry {
                     self.notifyObserver(isConnected: false)
                     return
                 }
-                self.countDisconnect = self.countDisconnect + 1
-                NSLog("OVReachability > Failed Times : %d",self.countDisconnect)
+                NSLog("[OVReachability] Check Failed (%d times)",self.countDisconnect)
             }
             
             sleep(UInt32(self.timeIntervalSleep))
@@ -129,14 +130,14 @@ public class OVReachability: NSObject {
         isServerReachable = isConnected
         completion(isConnected)
         
-        NSLog("OVReachability > Notified %@",isConnected ? "Connected" : "Disconnected")
+        NSLog("[OVReachability] Notified (%@)",isConnected ? "Connected" : "Disconnected")
         
     }
     
     fileprivate func checkConnectivityAsync(completion: @escaping (_ connected: Bool) -> Void) {
         
         if !isCheckingConnectivity {
-            NSLog("OVReachability > Starting Request")
+            NSLog("[OVReachability] Check Connectivity (Starting)")
             
             if let domain = self.domain{
                 
@@ -153,7 +154,7 @@ public class OVReachability: NSObject {
                 let task = session.dataTask(with: domain) { (data, response, error) in
                     self.isCheckingConnectivity = false
                     let success = (error == nil && response != nil)
-                    NSLog(String(format: "OVReachability > Request %@", success ? "Success" : "Failed" ))
+                    NSLog(String(format: "[OVReachability] Check Connectivity (Stopped : %@)", success ? "Success" : "Failed" ))
                     completion(success)
                 }
                 task.resume()

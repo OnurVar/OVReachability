@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = 'OVReachability'
-  s.version                 = '1.3.0'
+  s.version                 = '1.3.1'
   s.summary                 = 'An Improved Reachability which actually checks url'
   s.description             = <<-DESC
 The original reachability class just checks the first hop on the way to the Host. If you have VPN connection, It doesn't check if we have actually connection to the Host. Well this class does. It actually tries to connect every x second to the Host until it has a valid connection.

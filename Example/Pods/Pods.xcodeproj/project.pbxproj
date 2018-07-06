@@ -10,24 +10,22 @@
 		023708965B1D1E8A5F11395BE822FD59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28ACBA15E21B50CAB2D2FB103B79E054 /* Pods-OVReachability_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C3F9F5E9854801E5EA3D99E1A6A8A4 /* Pods-OVReachability_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D011760E73A221F3DDDC3E9DEC4C0D6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706C7AFFE37BA158C3553250F4B5FAED /* Alamofire.framework */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
 		376F3816D924CF2D875EA91B4A17C0D1 /* OVReachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EB7CBE9ED148484D91BF838FE185E9 /* OVReachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B02FD24B605F7A1241FFFF4D0E0B726 /* OVReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9EE78E218D75D738488993E58FE9D1 /* OVReachability-dummy.m */; };
-		514D28BAEF5B84A2F2E7846C1AD5443B /* Pods-OVReachability_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F96686DD82C753AC8C000655D84F039E /* Pods-OVReachability_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		514D28BAEF5B84A2F2E7846C1AD5443B /* Pods-OVReachability_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF9B443119A3507E0536CC45CAFE5E4E /* Pods-OVReachability_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
 		57C758DCFE4993902428F0DC9696B42C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
-		72B91B61F3C83103EC3BD9C5E1AB9221 /* Pods-OVReachability_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F18A161B57BE9380EDEEB7C9C6DEE1D /* Pods-OVReachability_Tests-dummy.m */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */; };
 		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */; };
-		ABA827D49D7A8B128085AFCB1A3C720A /* Pods-OVReachability_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB448AA9894D5653C4C3D4781ADB54D /* Pods-OVReachability_Example-dummy.m */; };
+		ABA827D49D7A8B128085AFCB1A3C720A /* Pods-OVReachability_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097A1CC1F0D3F27C84C41362DDFAEA5 /* Pods-OVReachability_Example-dummy.m */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */; };
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */; };
@@ -37,7 +35,6 @@
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */; };
-		F8BDFE3C9B71BF56C030E2CC0CA58352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +44,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
 			remoteInfo = Alamofire;
-		};
-		8B07E9D9F65EF8AF20BAD7EAACA897CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F154AE2E7C1670DD2744EBB9628FE709;
-			remoteInfo = "Pods-OVReachability_Example";
 		};
 		C2F02EC9654CDDE62ED97BC707FB43B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -72,66 +62,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020DB273629476F4AA7FC5B4456FC284 /* Pods_OVReachability_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OVReachability_Tests.framework; path = "Pods-OVReachability_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		06F181819329B1273A311258615667F0 /* Pods-OVReachability_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0E5EC60470952DA80BF6A79293F26819 /* OVReachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OVReachability-prefix.pch"; sourceTree = "<group>"; };
 		0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		117EFB31D9AD9673BAF51B48596F19E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13D9DE725E91CCFCCADA3D646D590EB3 /* Pods-OVReachability_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Example.release.xcconfig"; sourceTree = "<group>"; };
 		155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		1BDB6BDB4860187156139C1810328BFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E230A0448B394DE26E688DAC8E6201E /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		20E842C3A8E708457820EA29E86E97ED /* Pods-OVReachability_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OVReachability_Tests.modulemap"; sourceTree = "<group>"; };
 		210971763CB2FC0DC4E378271A37BE32 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		3097A1CC1F0D3F27C84C41362DDFAEA5 /* Pods-OVReachability_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OVReachability_Example-dummy.m"; sourceTree = "<group>"; };
 		32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		35573ECBFBE855433F60AFEA2868EFDF /* Pods_OVReachability_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OVReachability_Example.framework; path = "Pods-OVReachability_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37D839A95B0FAC7806B8DE49FD5F7BB0 /* Pods-OVReachability_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OVReachability_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		35B0E22FC23A05C1673E7E80540CB470 /* Pods-OVReachability_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Example-frameworks.sh"; sourceTree = "<group>"; };
+		37939F5028762C962A26A939529EC799 /* Pods_OVReachability_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OVReachability_Example.framework; path = "Pods-OVReachability_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAFE1EB22162329D76CC5D89D63E405 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		414464DB2BD4C8EAF949E9A13FE6CC09 /* Pods-OVReachability_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OVReachability_Example.modulemap"; sourceTree = "<group>"; };
-		44828C13711267FFE110B536C153A262 /* Pods-OVReachability_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OVReachability_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		449B1A795152A3BCC3557AB9CE159702 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41A80877089C190DE6771956C3D9F6EA /* Pods-OVReachability_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OVReachability_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		4C587BD73F799EA7638B2CA43EC6EECA /* OVReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OVReachability.swift; path = OVReachability/Classes/OVReachability.swift; sourceTree = "<group>"; };
-		5A0716B16656BD6AA4743EDAE871FA48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53371A9447CE87CD7C4047DEB4D181A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D17FADAF74D6569D19525035E29377 /* OVReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OVReachability.framework; path = OVReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DE143078142ABD6959AC31C5E7734B /* OVReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OVReachability.modulemap; sourceTree = "<group>"; };
 		61D920D6E48023BCBF18CD83450D05F5 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		6F18A161B57BE9380EDEEB7C9C6DEE1D /* Pods-OVReachability_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OVReachability_Tests-dummy.m"; sourceTree = "<group>"; };
-		6FA27CCE12B93DD4424C346EB7AC3CF8 /* Pods-OVReachability_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		706C7AFFE37BA158C3553250F4B5FAED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		770525330591B5B9B1FFED8BFAA3BCB8 /* Pods-OVReachability_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OVReachability_Example.modulemap"; sourceTree = "<group>"; };
 		77560D8697992FBF627C1F1E40BE23A5 /* OVReachability.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = OVReachability.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		8873C7810070C7C2EADADD2ED538ADEA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B68B7BCAC752757E9396FE880839143 /* Pods-OVReachability_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Example-frameworks.sh"; sourceTree = "<group>"; };
+		94BE3D8079663406BBA62FCE4659B933 /* Pods-OVReachability_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Example-resources.sh"; sourceTree = "<group>"; };
 		A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		A87292389E3B65F1575844CA485F9F0B /* Pods-OVReachability_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AA893558C0D42AC57C68C42A9247E97B /* OVReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OVReachability.framework; path = OVReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD76A8AA2FFAA6E568749B6A2BC6F2F /* OVReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OVReachability.xcconfig; sourceTree = "<group>"; };
 		B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		B8A47FDEBEAF8438A089FB8444F193A5 /* Pods-OVReachability_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OVReachability_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		BE6B1FB1B66E5DB0280A7D4D8E648B70 /* Pods-OVReachability_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C09283078E0193AC0D5BD211896960AC /* Pods-OVReachability_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OVReachability_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBB448AA9894D5653C4C3D4781ADB54D /* Pods-OVReachability_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OVReachability_Example-dummy.m"; sourceTree = "<group>"; };
-		D1C3F9F5E9854801E5EA3D99E1A6A8A4 /* Pods-OVReachability_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OVReachability_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C5F88BC1256BC6C08444945DBFCA05E5 /* Pods-OVReachability_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		D35F3E80ACDFE2F7BC5DA502E9619698 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		D4CE7DF7BC3C8DFD376B2E855FF97209 /* Pods-OVReachability_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OVReachability_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D7EB7CBE9ED148484D91BF838FE185E9 /* OVReachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OVReachability-umbrella.h"; sourceTree = "<group>"; };
+		DF9B443119A3507E0536CC45CAFE5E4E /* Pods-OVReachability_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OVReachability_Example-umbrella.h"; sourceTree = "<group>"; };
 		DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		E1FC8EFD61EFCCDDEF5A6CBEE2F68924 /* Pods-OVReachability_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Example-resources.sh"; sourceTree = "<group>"; };
 		E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		E877583462979932C57370016BA1B4CA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		ED9EE78E218D75D738488993E58FE9D1 /* OVReachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OVReachability-dummy.m"; sourceTree = "<group>"; };
-		F33DC9F895D44B6CB047F85C3AECE1B6 /* Pods-OVReachability_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OVReachability_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F96686DD82C753AC8C000655D84F039E /* Pods-OVReachability_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OVReachability_Example-umbrella.h"; sourceTree = "<group>"; };
-		FC90761F73DDDFED591206E7656A151E /* Pods-OVReachability_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OVReachability_Tests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,14 +120,6 @@
 			files = (
 				2D011760E73A221F3DDDC3E9DEC4C0D6 /* Alamofire.framework in Frameworks */,
 				023708965B1D1E8A5F11395BE822FD59 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A152AEFBFBFFE61DCA89F864A096D69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8BDFE3C9B71BF56C030E2CC0CA58352 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,53 +232,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		635B47ECB9AA81981B3729B3047E38AF /* Pods-OVReachability_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5A0716B16656BD6AA4743EDAE871FA48 /* Info.plist */,
-				20E842C3A8E708457820EA29E86E97ED /* Pods-OVReachability_Tests.modulemap */,
-				37D839A95B0FAC7806B8DE49FD5F7BB0 /* Pods-OVReachability_Tests-acknowledgements.markdown */,
-				B8A47FDEBEAF8438A089FB8444F193A5 /* Pods-OVReachability_Tests-acknowledgements.plist */,
-				6F18A161B57BE9380EDEEB7C9C6DEE1D /* Pods-OVReachability_Tests-dummy.m */,
-				BE6B1FB1B66E5DB0280A7D4D8E648B70 /* Pods-OVReachability_Tests-frameworks.sh */,
-				FC90761F73DDDFED591206E7656A151E /* Pods-OVReachability_Tests-resources.sh */,
-				D1C3F9F5E9854801E5EA3D99E1A6A8A4 /* Pods-OVReachability_Tests-umbrella.h */,
-				6FA27CCE12B93DD4424C346EB7AC3CF8 /* Pods-OVReachability_Tests.debug.xcconfig */,
-				A87292389E3B65F1575844CA485F9F0B /* Pods-OVReachability_Tests.release.xcconfig */,
-			);
-			name = "Pods-OVReachability_Tests";
-			path = "Target Support Files/Pods-OVReachability_Tests";
-			sourceTree = "<group>";
-		};
-		6E40314179C7D1AA4AEC16194939212E /* Pods-OVReachability_Example */ = {
-			isa = PBXGroup;
-			children = (
-				449B1A795152A3BCC3557AB9CE159702 /* Info.plist */,
-				414464DB2BD4C8EAF949E9A13FE6CC09 /* Pods-OVReachability_Example.modulemap */,
-				44828C13711267FFE110B536C153A262 /* Pods-OVReachability_Example-acknowledgements.markdown */,
-				C09283078E0193AC0D5BD211896960AC /* Pods-OVReachability_Example-acknowledgements.plist */,
-				CBB448AA9894D5653C4C3D4781ADB54D /* Pods-OVReachability_Example-dummy.m */,
-				9B68B7BCAC752757E9396FE880839143 /* Pods-OVReachability_Example-frameworks.sh */,
-				E1FC8EFD61EFCCDDEF5A6CBEE2F68924 /* Pods-OVReachability_Example-resources.sh */,
-				F96686DD82C753AC8C000655D84F039E /* Pods-OVReachability_Example-umbrella.h */,
-				F33DC9F895D44B6CB047F85C3AECE1B6 /* Pods-OVReachability_Example.debug.xcconfig */,
-				13D9DE725E91CCFCCADA3D646D590EB3 /* Pods-OVReachability_Example.release.xcconfig */,
-			);
-			name = "Pods-OVReachability_Example";
-			path = "Target Support Files/Pods-OVReachability_Example";
-			sourceTree = "<group>";
-		};
-		7168DFCF0D3EF2625650972B53BF7A0C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8873C7810070C7C2EADADD2ED538ADEA /* Alamofire.framework */,
-				AA893558C0D42AC57C68C42A9247E97B /* OVReachability.framework */,
-				35573ECBFBE855433F60AFEA2868EFDF /* Pods_OVReachability_Example.framework */,
-				020DB273629476F4AA7FC5B4456FC284 /* Pods_OVReachability_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -315,9 +239,27 @@
 				BF781A43CD6E5AAB0F724B3842AD66D4 /* Development Pods */,
 				59B91F212518421F271EBA85D5530651 /* Frameworks */,
 				35F128EB69B6F7FB7DA93BBF6C130FAE /* Pods */,
-				7168DFCF0D3EF2625650972B53BF7A0C /* Products */,
-				E1278310CD0F48B5743E0D0557446A64 /* Targets Support Files */,
+				EA8478C05111C448C4C8E0AB8D166384 /* Products */,
+				F787022AEE444F7AE2C3E08CC7F59D47 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		979C1E00E36D8EC85C858193C66A8446 /* Pods-OVReachability_Example */ = {
+			isa = PBXGroup;
+			children = (
+				53371A9447CE87CD7C4047DEB4D181A8 /* Info.plist */,
+				770525330591B5B9B1FFED8BFAA3BCB8 /* Pods-OVReachability_Example.modulemap */,
+				D4CE7DF7BC3C8DFD376B2E855FF97209 /* Pods-OVReachability_Example-acknowledgements.markdown */,
+				41A80877089C190DE6771956C3D9F6EA /* Pods-OVReachability_Example-acknowledgements.plist */,
+				3097A1CC1F0D3F27C84C41362DDFAEA5 /* Pods-OVReachability_Example-dummy.m */,
+				35B0E22FC23A05C1673E7E80540CB470 /* Pods-OVReachability_Example-frameworks.sh */,
+				94BE3D8079663406BBA62FCE4659B933 /* Pods-OVReachability_Example-resources.sh */,
+				DF9B443119A3507E0536CC45CAFE5E4E /* Pods-OVReachability_Example-umbrella.h */,
+				06F181819329B1273A311258615667F0 /* Pods-OVReachability_Example.debug.xcconfig */,
+				C5F88BC1256BC6C08444945DBFCA05E5 /* Pods-OVReachability_Example.release.xcconfig */,
+			);
+			name = "Pods-OVReachability_Example";
+			path = "Target Support Files/Pods-OVReachability_Example";
 			sourceTree = "<group>";
 		};
 		BF781A43CD6E5AAB0F724B3842AD66D4 /* Development Pods */ = {
@@ -338,11 +280,20 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		E1278310CD0F48B5743E0D0557446A64 /* Targets Support Files */ = {
+		EA8478C05111C448C4C8E0AB8D166384 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E40314179C7D1AA4AEC16194939212E /* Pods-OVReachability_Example */,
-				635B47ECB9AA81981B3729B3047E38AF /* Pods-OVReachability_Tests */,
+				3CAFE1EB22162329D76CC5D89D63E405 /* Alamofire.framework */,
+				57D17FADAF74D6569D19525035E29377 /* OVReachability.framework */,
+				37939F5028762C962A26A939529EC799 /* Pods_OVReachability_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F787022AEE444F7AE2C3E08CC7F59D47 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				979C1E00E36D8EC85C858193C66A8446 /* Pods-OVReachability_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -350,14 +301,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		37E7A5791987CBC37ADBFABD3116A2E9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28ACBA15E21B50CAB2D2FB103B79E054 /* Pods-OVReachability_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		74B1AE8D66A393D85BFF608E64E7EA25 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,24 +328,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4AB84E66BCBB18AF1BB73D70A158B3C7 /* Pods-OVReachability_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8227DFABA4B79CB9AB77768A5190AF5 /* Build configuration list for PBXNativeTarget "Pods-OVReachability_Tests" */;
-			buildPhases = (
-				B2380156F9E0192BF79ED6533AF68697 /* Sources */,
-				6A152AEFBFBFFE61DCA89F864A096D69 /* Frameworks */,
-				37E7A5791987CBC37ADBFABD3116A2E9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3AB0648472F306465D57690BC54F330E /* PBXTargetDependency */,
-			);
-			name = "Pods-OVReachability_Tests";
-			productName = "Pods-OVReachability_Tests";
-			productReference = 020DB273629476F4AA7FC5B4456FC284 /* Pods_OVReachability_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
@@ -417,7 +342,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 8873C7810070C7C2EADADD2ED538ADEA /* Alamofire.framework */;
+			productReference = 3CAFE1EB22162329D76CC5D89D63E405 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F154AE2E7C1670DD2744EBB9628FE709 /* Pods-OVReachability_Example */ = {
@@ -436,7 +361,7 @@
 			);
 			name = "Pods-OVReachability_Example";
 			productName = "Pods-OVReachability_Example";
-			productReference = 35573ECBFBE855433F60AFEA2868EFDF /* Pods_OVReachability_Example.framework */;
+			productReference = 37939F5028762C962A26A939529EC799 /* Pods_OVReachability_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FE5F334F48049E121513D25C52E29F09 /* OVReachability */ = {
@@ -454,7 +379,7 @@
 			);
 			name = OVReachability;
 			productName = OVReachability;
-			productReference = AA893558C0D42AC57C68C42A9247E97B /* OVReachability.framework */;
+			productReference = 57D17FADAF74D6569D19525035E29377 /* OVReachability.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -474,14 +399,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7168DFCF0D3EF2625650972B53BF7A0C /* Products */;
+			productRefGroup = EA8478C05111C448C4C8E0AB8D166384 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
 				FE5F334F48049E121513D25C52E29F09 /* OVReachability */,
 				F154AE2E7C1670DD2744EBB9628FE709 /* Pods-OVReachability_Example */,
-				4AB84E66BCBB18AF1BB73D70A158B3C7 /* Pods-OVReachability_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -529,14 +453,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2380156F9E0192BF79ED6533AF68697 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72B91B61F3C83103EC3BD9C5E1AB9221 /* Pods-OVReachability_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -545,12 +461,6 @@
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
 			targetProxy = 87502274A4091EF66889D03D07B4469D /* PBXContainerItemProxy */;
-		};
-		3AB0648472F306465D57690BC54F330E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-OVReachability_Example";
-			target = F154AE2E7C1670DD2744EBB9628FE709 /* Pods-OVReachability_Example */;
-			targetProxy = 8B07E9D9F65EF8AF20BAD7EAACA897CD /* PBXContainerItemProxy */;
 		};
 		7A720A1353D6A61F2BF966321AA78DE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -630,43 +540,9 @@
 			};
 			name = Debug;
 		};
-		2E82884EFB6093A4F30B490B3B89D9D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A87292389E3B65F1575844CA485F9F0B /* Pods-OVReachability_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OVReachability_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OVReachability_Tests/Pods-OVReachability_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		7A66CB6B260175C695DF366887B9EFA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F33DC9F895D44B6CB047F85C3AECE1B6 /* Pods-OVReachability_Example.debug.xcconfig */;
+			baseConfigurationReference = 06F181819329B1273A311258615667F0 /* Pods-OVReachability_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -693,39 +569,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8DA0BD1DB8CB33BCC6B123499ABA4263 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FA27CCE12B93DD4424C346EB7AC3CF8 /* Pods-OVReachability_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OVReachability_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OVReachability_Tests/Pods-OVReachability_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -922,7 +765,7 @@
 		};
 		FF66838AB8FDFB4404D352F005158DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13D9DE725E91CCFCCADA3D646D590EB3 /* Pods-OVReachability_Example.release.xcconfig */;
+			baseConfigurationReference = C5F88BC1256BC6C08444945DBFCA05E5 /* Pods-OVReachability_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -990,15 +833,6 @@
 			buildConfigurations = (
 				C7986EE1B1EBD441F3D4BDCEA379E92E /* Debug */,
 				E97AA8C36DE5EE88A375C005D2AB1DB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8227DFABA4B79CB9AB77768A5190AF5 /* Build configuration list for PBXNativeTarget "Pods-OVReachability_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DA0BD1DB8CB33BCC6B123499ABA4263 /* Debug */,
-				2E82884EFB6093A4F30B490B3B89D9D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

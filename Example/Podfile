@@ -3,9 +3,4 @@ use_frameworks!
 target 'OVReachability_Example' do
   pod 'OVReachability', :path => '../'
 
-  target 'OVReachability_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
