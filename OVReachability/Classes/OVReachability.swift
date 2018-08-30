@@ -9,30 +9,35 @@
 import UIKit
 import Alamofire
 
-
-
+public enum ConnectionStatus {
+    case Disconnected
+    case Connected
+    case StillDisconnected
+    case StillConnected
+}
 
 public class OVReachability: NSObject {
 
     
     //MARK: TypeAlias
-    public typealias OVReachabilityCompletion = (_ connected: Bool) -> Void
+    public typealias OVReachabilityCompletion = (_ status: ConnectionStatus) -> Void
     
     
     //MARK: Variables
     public static let sharedInstance = OVReachability()
     public var isServerReachable = false
+    public var stopWhenConnected = true
     public var numberOfTry = 0
     public var timeoutInterval = 5
     
     //MARK: Variables
-    fileprivate var completion : OVReachabilityCompletion!
+    fileprivate var completion : OVReachabilityCompletion?
     fileprivate var manager : Alamofire.NetworkReachabilityManager!
     fileprivate var domain : URL!
     fileprivate var timeIntervalSleep = 1 //Time Interval to sleep
     fileprivate var countDisconnect = 0
     fileprivate var isCheckingConnectivity = false
-    
+    fileprivate var isEnabled = false
     
     
     //MARK: Initializers
@@ -43,7 +48,7 @@ public class OVReachability: NSObject {
     
     public func setup(withDomain domain: URL, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
         
-        NSLog("[OVReachability] Version (1.3.1)")
+        NSLog("[OVReachability] Version (1.3.2)")
         self.completion         = completion
         self.timeIntervalSleep  = time
         self.domain             = domain
@@ -51,86 +56,123 @@ public class OVReachability: NSObject {
         stopMonitoring()
         manager                 = nil
         
-        
         if let host = domain.host {
+            
             self.manager = Alamofire.NetworkReachabilityManager(host: host)
-
             manager.listener = { status in
                 switch status {
-                    
                 case .reachable(.ethernetOrWiFi):
                     NSLog("[OVReachability] Status Changed (Reachable Ethernet/Wifi)")
-                    self.checkConnectionLoop()
                     break
                 case .reachable(.wwan):
                     NSLog("[OVReachability] Status Changed (Reachable WWAN)")
-                    self.checkConnectionLoop()
                     break
                 default:
                     NSLog("[OVReachability] Status Changed (Not Reachable)")
-                    self.notifyObserver(isConnected: false)
                     break
                 }
+                
+                //Refresh Variables
+                self.countDisconnect = 0
+                
+                //Trigger Loop
+                self.checkConnectionLoop()
+                
             }
-            startMonitoring()
+            
+            manager.startListening()
+            
         }
     }
     
     public func stopMonitoring(){
+
         if let manager = manager{
             manager.stopListening()
         }
+        
+        isEnabled = false
     }
     
     public func startMonitoring(){
-        if let manager = manager{
-            manager.startListening()
-        }
+        
+        isEnabled = true
+        
+        //Refresh Variables
+        self.countDisconnect = 0
+        
+        //Trigger Loop
+        checkConnectionLoop()
     }
+    
     
     
     //MARK: Private Methods
     
     fileprivate func checkConnectionLoop(){
-        self.checkConnectivityAsync(completion: { (isConnected) in
-            var isServerReachableCurrent = false
-            isServerReachableCurrent = isConnected
-            let wasServerReachable = self.isServerReachable
-            self.isServerReachable = isServerReachableCurrent
-            
-            if true == wasServerReachable && true == isServerReachableCurrent {
-                return
-            }else if false == wasServerReachable && true == isServerReachableCurrent {
-                self.notifyObserver(isConnected: true)
-                return
-            }else if true == wasServerReachable && false == isServerReachableCurrent {
-                if self.numberOfTry == 0 {
-                    self.notifyObserver(isConnected: false)
-                    return
+        if isEnabled {
+            self.checkConnectivityAsync(completion: { (isConnected) in
+                var isServerReachableCurrent = false
+                isServerReachableCurrent = isConnected
+                let wasServerReachable = self.isServerReachable
+                self.isServerReachable = isServerReachableCurrent
+                
+                if true == wasServerReachable && true == isServerReachableCurrent {
+                    self.notifyObserver(status: .StillConnected)
+                    if self.stopWhenConnected {
+                        return
+                    }
+                }else if false == wasServerReachable && true == isServerReachableCurrent {
+                    self.notifyObserver(status: .Connected)
+                    if self.stopWhenConnected {
+                        return
+                    }
+                }else if true == wasServerReachable && false == isServerReachableCurrent {
+                    self.notifyObserver(status: .Disconnected)
+                    if self.numberOfTry == 0 {
+                        return
+                    }
+                }else if false == wasServerReachable && false == isServerReachableCurrent {
+                    self.countDisconnect = self.countDisconnect + 1
+                    self.notifyObserver(status: .StillDisconnected)
+                    if self.countDisconnect == self.numberOfTry {
+                        return
+                    }
+                    NSLog("[OVReachability] Check Failed (%d times)",self.countDisconnect)
                 }
-            }else if false == wasServerReachable && false == isServerReachableCurrent {
-                self.countDisconnect = self.countDisconnect + 1
-                if self.countDisconnect == self.numberOfTry {
-                    self.notifyObserver(isConnected: false)
-                    return
-                }
-                NSLog("[OVReachability] Check Failed (%d times)",self.countDisconnect)
-            }
-            
-            sleep(UInt32(self.timeIntervalSleep))
-            self.checkConnectionLoop()
-        })
+                
+                sleep(UInt32(self.timeIntervalSleep))
+                self.checkConnectionLoop()
+            })
+        }
     }
     
-    fileprivate func notifyObserver(isConnected: Bool){
+    fileprivate func notifyObserver(status: ConnectionStatus){
+    
         
-        //Refresh Variables
-        self.countDisconnect = 0
-        
-        isServerReachable = isConnected
-        completion(isConnected)
-        
-        NSLog("[OVReachability] Notified (%@)",isConnected ? "Connected" : "Disconnected")
+        switch status {
+        case .Connected:
+            NSLog("[OVReachability] Notified (Connected)")
+            isServerReachable = true
+            break
+        case .Disconnected:
+            NSLog("[OVReachability] Notified (Disconnected)")
+            isServerReachable = false
+            break
+        case .StillConnected:
+            NSLog("[OVReachability] Notified (StillConnected)")
+            isServerReachable = true
+            break
+        case .StillDisconnected:
+            NSLog("[OVReachability] Notified (StillDisconnected)")
+            isServerReachable = false
+            break
+        }
+        DispatchQueue.main.async {
+            if let completion = self.completion {
+                completion(status)
+            }
+        }
         
     }
     

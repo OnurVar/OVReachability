@@ -11,6 +11,7 @@ import OVReachability
 
 class ViewController: UIViewController {
 
+
     @IBOutlet weak var lblStatus : UILabel!
     
     override func viewDidLoad() {
@@ -26,18 +27,34 @@ class ViewController: UIViewController {
     
     func setupReachability(){
         self.lblStatus.text = "Disconnected"
-        if let url = URL(string: "https://172.16.7.4:8445") {
-            OVReachability.sharedInstance.numberOfTry = 5
-            OVReachability.sharedInstance.setup(withDomain: url,withTimeInterval: 1) { (isConnected) in
-                DispatchQueue.main.async {
-                    self.lblStatus.text = isConnected ? "Connected" : "Disconnected"
+        if let url = URL(string: "https://www.google.com") {
+            OVReachability.sharedInstance.numberOfTry           = -1
+            OVReachability.sharedInstance.setup(withDomain: url, withTimeInterval: 5) { (status) in
+                switch status {
+                case .Connected:
+                    self.lblStatus.text = "Connected"
+                    break
+                case .Disconnected:
+                    self.lblStatus.text = "Disconnected"
+                    break
+                case .StillConnected:
+                    self.lblStatus.text = "Still Connected"
+                    break
+                case .StillDisconnected:
+                    self.lblStatus.text = "Still Disconnected"
+                    break
                 }
             }
         }
     }
 
-    @IBAction func btnTriggerTapped(_ sender: Any) {
+    @IBAction func btnStartTapped(_ sender: Any) {
         OVReachability.sharedInstance.startMonitoring()
     }
+    
+    @IBAction func btnStopTapped(_ sender: Any) {
+        OVReachability.sharedInstance.stopMonitoring()
+    }
+    
 }
 

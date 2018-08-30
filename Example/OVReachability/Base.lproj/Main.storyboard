@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,9 +33,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nOM-bT-LoE"/>
                                 </constraints>
-                                <state key="normal" title="Trigger"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="btnTriggerTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ww0-HD-VIV"/>
+                                    <action selector="btnStartTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ww0-HD-VIV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzA-u1-UkV">
+                                <rect key="frame" x="16" y="575" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GZ3-nP-vSd"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="btnStopTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FXe-7c-0aA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,8 +54,11 @@
                             <constraint firstItem="Hds-ZB-R85" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="JQg-0S-edq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SAJ-97-UoO" secondAttribute="bottom" constant="20" id="KbN-yD-Zst"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SAJ-97-UoO" secondAttribute="trailing" id="OHh-MA-udN"/>
+                            <constraint firstItem="SAJ-97-UoO" firstAttribute="top" secondItem="lzA-u1-UkV" secondAttribute="bottom" constant="12" id="YDc-g7-EIB"/>
+                            <constraint firstItem="lzA-u1-UkV" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="cc0-lQ-e8j"/>
                             <constraint firstItem="SAJ-97-UoO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="mPl-pv-qwO"/>
                             <constraint firstItem="Hds-ZB-R85" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="s5n-bK-BYv"/>
+                            <constraint firstItem="lzA-u1-UkV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yFS-dF-9PB"/>
                         </constraints>
                     </view>
                     <connections>

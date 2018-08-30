@@ -1,6 +1,0 @@
-framework module OVReachability {
-  umbrella header "OVReachability-umbrella.h"
-
-  export *
-  module * { export * }
-}
