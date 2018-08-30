@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.7.3)
+  - OVReachability (1.3.2):
+    - Alamofire
+
+DEPENDENCIES:
+  - OVReachability (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  OVReachability:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  OVReachability: ea7f9772b975aab7e8bcbfc3d6682394f2fd0611
+
+PODFILE CHECKSUM: faa8ed8fa058e7dce8202f870fbdfd85f31f7664
+
+COCOAPODS: 1.5.3
