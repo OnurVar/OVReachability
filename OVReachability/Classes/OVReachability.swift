@@ -24,17 +24,13 @@ public class OVReachability: NSObject {
     
     
     //MARK: Variables
-    public static let sharedInstance = OVReachability()
-    public var isServerReachable = false
-    public var stopWhenConnected = true
-    public var numberOfTry = 0
-    public var timeoutInterval = 5
+    public static let shared        = OVReachability()
+    public var isServerReachable    = false
     
     //MARK: Variables
     fileprivate var completion : OVReachabilityCompletion?
     fileprivate var manager : Alamofire.NetworkReachabilityManager!
     fileprivate var domain : URL!
-    fileprivate var timeIntervalSleep = 1 //Time Interval to sleep
     fileprivate var countDisconnect = 0
     fileprivate var isCheckingConnectivity = false
     fileprivate var isEnabled = false
@@ -46,12 +42,11 @@ public class OVReachability: NSObject {
         
     }
     
-    public func setup(withDomain domain: URL, withTimeInterval time: Int! = 1, withCompletion completion:@escaping OVReachabilityCompletion){
+    public func setup(withDomain aDomain: URL, withCompletion aCompletion:@escaping OVReachabilityCompletion){
         
         NSLog("[OVReachability] Version (1.3.2)")
-        self.completion         = completion
-        self.timeIntervalSleep  = time
-        self.domain             = domain
+        self.completion         = aCompletion
+        self.domain             = aDomain
        
         stopMonitoring()
         manager                 = nil
@@ -95,6 +90,7 @@ public class OVReachability: NSObject {
     }
     
     public func startMonitoring(){
+        if isEnabled { return }
         
         isEnabled = true
         
@@ -119,29 +115,29 @@ public class OVReachability: NSObject {
                 
                 if true == wasServerReachable && true == isServerReachableCurrent {
                     self.notifyObserver(status: .StillConnected)
-                    if self.stopWhenConnected {
+                    if OVReachabilityConfiguration.shared.stopWhenConnected {
                         return
                     }
                 }else if false == wasServerReachable && true == isServerReachableCurrent {
                     self.notifyObserver(status: .Connected)
-                    if self.stopWhenConnected {
+                    if OVReachabilityConfiguration.shared.stopWhenConnected {
                         return
                     }
                 }else if true == wasServerReachable && false == isServerReachableCurrent {
                     self.notifyObserver(status: .Disconnected)
-                    if self.numberOfTry == 0 {
+                    if OVReachabilityConfiguration.shared.numberOfTry == 0 {
                         return
                     }
                 }else if false == wasServerReachable && false == isServerReachableCurrent {
                     self.countDisconnect = self.countDisconnect + 1
                     self.notifyObserver(status: .StillDisconnected)
-                    if self.countDisconnect == self.numberOfTry {
+                    if self.countDisconnect == OVReachabilityConfiguration.shared.numberOfTry {
                         return
                     }
                     NSLog("[OVReachability] Check Failed (%d times)",self.countDisconnect)
                 }
                 
-                sleep(UInt32(self.timeIntervalSleep))
+                sleep(UInt32(OVReachabilityConfiguration.shared.timeIntervalSleep))
                 self.checkConnectionLoop()
             })
         }
@@ -186,7 +182,7 @@ public class OVReachability: NSObject {
                 // Setup the configuration
                 let sessionConfiguration = URLSessionConfiguration.default
                 sessionConfiguration.urlCache = nil
-                sessionConfiguration.timeoutIntervalForRequest = Double(timeoutInterval)
+                sessionConfiguration.timeoutIntervalForRequest = Double(OVReachabilityConfiguration.shared.requestTimeoutInterval)
                 
                 // initialize the URLSession
                 let session = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue())

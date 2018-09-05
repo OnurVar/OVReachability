@@ -27,9 +27,11 @@ class ViewController: UIViewController {
     
     func setupReachability(){
         self.lblStatus.text = "Disconnected"
-        if let url = URL(string: "https://www.google.com") {
-            OVReachability.sharedInstance.numberOfTry           = -1
-            OVReachability.sharedInstance.setup(withDomain: url, withTimeInterval: 5) { (status) in
+        if let url = URL(string: "https://www.google.come3e3") {
+            OVReachabilityConfiguration.shared.numberOfTry              = -1
+            OVReachabilityConfiguration.shared.requestTimeoutInterval   = 3
+            
+            OVReachability.shared.setup(withDomain: url) { (status) in
                 switch status {
                 case .Connected:
                     self.lblStatus.text = "Connected"
@@ -49,11 +51,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnStartTapped(_ sender: Any) {
-        OVReachability.sharedInstance.startMonitoring()
+        OVReachability.shared.startMonitoring()
     }
     
     @IBAction func btnStopTapped(_ sender: Any) {
-        OVReachability.sharedInstance.stopMonitoring()
+        OVReachability.shared.stopMonitoring()
     }
     
 }
