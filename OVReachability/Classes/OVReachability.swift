@@ -44,7 +44,7 @@ public class OVReachability: NSObject {
     
     public func setup(withDomain aDomain: URL, withCompletion aCompletion:@escaping OVReachabilityCompletion){
         
-        NSLog("[OVReachability] Version (1.3.2)")
+        NSLog("[OVReachability] Version (1.3.3)")
         self.completion         = aCompletion
         self.domain             = aDomain
        
